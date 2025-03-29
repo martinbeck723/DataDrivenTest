@@ -9,6 +9,7 @@ public class AlertTestPage {
     // Locators
     private By alertButton = By.xpath("//button[text()='Click for JS Alert']");
     private By confirmButton = By.xpath("//button[text()='Click for JS Confirm']");
+    private By promptButton = By.xpath("//li/button[text()='Click for JS Prompt']");
 
     // Constructor
     public AlertTestPage(WebDriver driver) {
@@ -22,5 +23,9 @@ public class AlertTestPage {
 
     public void clickConfirmButton() {
         driver.findElement(confirmButton).click();
+    }
+
+    public void clickPromptButton() {
+        driver.findElement(promptButton).click();
     }
 }
