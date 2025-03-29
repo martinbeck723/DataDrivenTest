@@ -7,21 +7,20 @@ import utils.BaseTest;
 
 import static org.testng.Assert.assertEquals;
 
-public class AlertTest extends BaseTest {
+public class ConfirmTest extends BaseTest {
 
     @Test
     public void testLogin() {
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
         AlertTestPage alertTestPage = new AlertTestPage(driver);
 
-        //JS Alert
-        alertTestPage.clickAlertButton();
-
-        //Verify
+        //JS confirm
+        alertTestPage.clickConfirmButton();
         Alert alert = driver.switchTo().alert();
         String text = alert.getText();
-        assertEquals(text, "I am a JS Alert");
-        alert.accept(); // Accept the alert
+        assertEquals(text, "I am a JS Confirm");
+        //alert.dismiss();
+        alert.accept();
         //JS Prompt
 
     }
