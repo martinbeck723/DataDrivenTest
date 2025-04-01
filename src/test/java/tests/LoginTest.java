@@ -3,14 +3,11 @@ package tests;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.testng.annotations.Test;
-import pages.IFramesPage;
 import pages.LoginPage;
 import utils.BaseTest;
 import utils.Util;
 
 import java.io.IOException;
-
-import static org.testng.Assert.assertEquals;
 
 public class LoginTest extends BaseTest {
 
